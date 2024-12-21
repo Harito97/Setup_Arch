@@ -1,0 +1,55 @@
+{
+    "__separator__": null,
+    "config_version": "2.8.6",
+    "additional-repositories": [],
+    "archinstall-language": "English",
+    "audio_config": {"audio": "pipewire"},
+    "bootloader": "grub",
+    "debug": false,
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/sda or /dev/...",
+                "partitions": "I use with 4 groups: `/boot` `/` `/home` and others for data and projects saver"
+	    }
+	]
+    },
+    "hostname": "night or day - for 2 machine i use",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+      "kb_layout": "us",
+      "sys_enc": "UTF-8",
+      "sys_lang": "en_US"
+    },
+    "mirror_config": {
+      "mirror-regions": {
+        # simply i use global as i feel that the local server in Vietnam is not very nice 
+      }
+    },
+    "network_config": {
+      "type": "i use network_manager - that suggested for setup Desktop enviroment"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "All open-source (default)",
+        "greeter": "sddm",
+        "profile": {
+            "details": [
+                "Hyprland with polkit"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": "guided",
+    "silent": false,
+    "swap": true,
+    "timezone": "UTC +7",
+    "version": "3.x.y"
+}
