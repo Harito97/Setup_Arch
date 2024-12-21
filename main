@@ -2,4 +2,27 @@
 
 # This is the main command to control all function needed by SetupArch project.
 
- 
+# Function to update the resources 
+function update_config_resources() {
+    echo "Updating resources..."
+    CONFIG_RESOURCES_PATH="./config_sync/resources/home/harito/.config"
+
+    # ----------------------------------------------------------------
+    # | 2024 Dec 22 01:35:00 UTC+7 | Add kitty, hypr
+    # ----------------------------------------------------------------
+    # Update the kitty configuration
+    cp -r ~/.config/kitty/ $CONFIG_RESOURCES_PATH/kitty/ && \
+    echo "+ kitty configuration updated."
+
+    # Update the hypr configuration
+    cp -r ~/.config/hypr/ $CONFIG_RESOURCES_PATH/hypr/ && \
+    echo "+ hypr configuration updated."
+
+    # ----------------------------------------------------------------
+    # | 2024 Dec ... | Add ...
+    # ----------------------------------------------------------------
+    # ...
+    echo "Resources updated."
+}
+
+update_config_resources
