@@ -2,7 +2,7 @@
 
 # This is the main command to control all function needed by SetupArch project.
 
-# Function to update the resources 
+# Function to update the resources
 function update_config_resources() {
     echo "Updating resources..."
     CONFIG_RESOURCES_PATH="./config_sync/resources/home/harito/.config"
@@ -19,18 +19,21 @@ function update_config_resources() {
     echo "+ hypr configuration updated."
 
     # ----------------------------------------------------------------
-    # | 2024 Dec 22 13:15:00 | Add Code-OSS, zed
+    # | 2024 Dec 22 13:15:00 | Add Code-OSS, zed, dolphin
     # ----------------------------------------------------------------
     # Update the Code-OSS configuration
     cp ~/.config/Code\ -\ OSS/User/settings.json $CONFIG_RESOURCES_PATH/Code\ -\ OSS/User/settings.json
     code --list-extensions > $CONFIG_RESOURCES_PATH/Code\ -\ OSS/all_extensions.info
     # command print code to install all extension
-    # code --list-extensions | xargs -L 1 echo code --install-extension 
+    # code --list-extensions | xargs -L 1 echo code --install-extension
     echo "+ Code OSS configuration updated."
 
     # Update the zed configuration
     cp -r ~/.config/zed/ $CONFIG_RESOURCES_PATH/ && \
     echo "+ zed configuration updated."
+
+    cp ~/.config/dolphinrc $CONFIG_RESOURCES_PATH/dolphinrc && \
+    echo "+ dolphinrc configuration updated."
 
     # ----------------------------------------------------------------
     # | 2024 Dec 22 13:15:00 | Add Code-OSS
