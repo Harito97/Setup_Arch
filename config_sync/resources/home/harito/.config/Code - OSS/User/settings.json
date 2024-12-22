@@ -1,0 +1,9 @@
+{
+    "window.newWindowProfile": "Default",
+    "files.autoSave": "onFocusChange",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Matrixish"
+}

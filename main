@@ -11,15 +11,29 @@ function update_config_resources() {
     # | 2024 Dec 22 01:35:00 UTC+7 | Add kitty, hypr
     # ----------------------------------------------------------------
     # Update the kitty configuration
-    cp -r ~/.config/kitty/ $CONFIG_RESOURCES_PATH/kitty/ && \
+    cp -r ~/.config/kitty/ $CONFIG_RESOURCES_PATH/ && \
     echo "+ kitty configuration updated."
 
     # Update the hypr configuration
-    cp -r ~/.config/hypr/ $CONFIG_RESOURCES_PATH/hypr/ && \
+    cp -r ~/.config/hypr/ $CONFIG_RESOURCES_PATH/ && \
     echo "+ hypr configuration updated."
 
     # ----------------------------------------------------------------
-    # | 2024 Dec ... | Add ...
+    # | 2024 Dec 22 13:15:00 | Add Code-OSS, zed
+    # ----------------------------------------------------------------
+    # Update the Code-OSS configuration
+    cp ~/.config/Code\ -\ OSS/User/settings.json $CONFIG_RESOURCES_PATH/Code\ -\ OSS/User/settings.json
+    code --list-extensions > $CONFIG_RESOURCES_PATH/Code\ -\ OSS/all_extensions.info
+    # command print code to install all extension
+    # code --list-extensions | xargs -L 1 echo code --install-extension 
+    echo "+ Code OSS configuration updated."
+
+    # Update the zed configuration
+    cp -r ~/.config/zed/ $CONFIG_RESOURCES_PATH/ && \
+    echo "+ zed configuration updated."
+
+    # ----------------------------------------------------------------
+    # | 2024 Dec 22 13:15:00 | Add Code-OSS
     # ----------------------------------------------------------------
     # ...
     echo "Resources updated."
